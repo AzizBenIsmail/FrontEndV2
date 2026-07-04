@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Souk Digital | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">SD</span>
+        <span>Souk Digital</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="about.html">À propos</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">☀️</button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero compact-hero">
+        <div>
+          <p class="eyebrow">Tableau de bord</p>
+          <h1>Suivez vos favoris, vos achats et vos préférences.</h1>
+          <p>Une page dédiée pour centraliser votre expérience d’achat et votre activité sur Souk Digital.</p>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="dashboard-card">
+          <h3>Vos produits préférés</h3>
+          <div id="favoritesList" class="favorites-list"></div>
+        </article>
+        <article class="dashboard-card">
+          <h3>Résumé rapide</h3>
+          <div class="summary-cards">
+            <article>
+              <strong id="favoriteCount">0</strong>
+              <span>Favoris</span>
+            </article>
+            <article>
+              <strong id="cartSummary">0</strong>
+              <span>Articles au panier</span>
+            </article>
+            <article>
+              <strong>98%</strong>
+              <span>Disponibilité</span>
+            </article>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

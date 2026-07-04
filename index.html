@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Souk Digital | Boutique PC & Accessoires</title>
+    <meta
+      name="description"
+      content="Souk Digital est votre vitrine e-commerce pour les produits informatiques, les accessoires PC et les gadgets high-tech."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="#" class="brand">
+        <span class="brand-mark">SD</span>
+        <span>Souk Digital</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="about.html">À propos</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">☀️</button>
+        <button class="icon-btn" id="cartToggle" aria-label="Voir le panier">🛒 <span id="cartCount">0</span></button>
+        <button class="btn btn-outline" id="loginBtn">Connexion</button>
+        <button class="btn btn-primary" id="registerBtn">Créer un compte</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Nouveautés 2026</p>
+          <h1>Équipez votre setup avec style et performance.</h1>
+          <p>
+            Découvrez des produits premium pour gamers, créateurs et pros du numérique.
+            Livraison rapide, garanties officielles et promos exclusives.
+          </p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Acheter maintenant</a>
+            <a href="#dashboard" class="btn btn-secondary">Voir le dashboard</a>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <strong>24h</strong>
+              <span>Expédition</span>
+            </div>
+            <div>
+              <strong>4.9/5</strong>
+              <span>Clients satisfaits</span>
+            </div>
+            <div>
+              <strong>+150</strong>
+              <span>Produits premium</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+            alt="Setup gaming moderne"
+          />
+        </div>
+      </section>
+
+      <section class="categories">
+        <article>
+          <h3>Ordinateurs portables</h3>
+          <p>Puissance et mobilité pour chaque besoin.</p>
+        </article>
+        <article>
+          <h3>Écrans</h3>
+          <p>Visuels immersifs et précision professionnelle.</p>
+        </article>
+        <article>
+          <h3>Accessoires</h3>
+          <p>Claviers, souris, casques et hubs USB-C.</p>
+        </article>
+        <article>
+          <h3>Stockage</h3>
+          <p>SSD rapides et solutions de sauvegarde.</p>
+        </article>
+      </section>
+
+      <section id="products" class="section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Sélection du moment</p>
+            <h2>Produits phares</h2>
+          </div>
+          <a href="#" class="text-link">Voir tout</a>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+
+      <section class="section-block dashboard-layout">
+        <div class="dashboard-card">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Tableau de bord</p>
+              <h2>Vos préférences</h2>
+            </div>
+            <a href="dashboard.html" class="text-link">Ouvrir</a>
+          </div>
+          <div class="summary-cards">
+            <article>
+              <strong id="favoriteCount">0</strong>
+              <span>Favoris</span>
+            </article>
+            <article>
+              <strong id="cartSummary">0</strong>
+              <span>Articles au panier</span>
+            </article>
+            <article>
+              <strong>98%</strong>
+              <span>Disponibilité</span>
+            </article>
+          </div>
+          <div id="favoritesList" class="favorites-list"></div>
+        </div>
+
+        <div id="about" class="dashboard-card accent-card">
+          <p class="eyebrow">Pourquoi Souk Digital ?</p>
+          <h3>Une expérience shopping moderne, rapide et élégante.</h3>
+          <ul>
+            <li>Design responsive adapté mobile et desktop</li>
+            <li>Mode clair / sombre avec préférences enregistrées</li>
+            <li>Panier et favoris interactifs sans backend</li>
+            <li>Authentification statique pour démonstration</li>
+          </ul>
+          <a href="about.html" class="btn btn-secondary" style="margin-top:1rem;display:inline-block;">En savoir plus</a>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+      <div class="cart-header">
+        <h3>Votre panier</h3>
+        <button id="closeCart" class="icon-btn">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">0 DH</strong>
+        </div>
+        <button class="btn btn-primary wide">Passer la commande</button>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="authModal" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-top">
+          <h3 id="modalTitle">Connexion</h3>
+          <button class="icon-btn" id="closeAuth">✕</button>
+        </div>
+        <div class="tabs">
+          <button class="tab active" data-mode="login">Connexion</button>
+          <button class="tab" data-mode="register">Inscription</button>
+        </div>
+        <form class="auth-form" id="authForm">
+          <input type="email" placeholder="Adresse e-mail" required />
+          <input type="password" placeholder="Mot de passe" required />
+          <input id="confirmInput" type="password" placeholder="Confirmer le mot de passe" hidden />
+          <button class="btn btn-primary wide" type="submit">Se connecter</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
