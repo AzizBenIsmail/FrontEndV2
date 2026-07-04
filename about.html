@@ -16,39 +16,45 @@
     <header class="topbar">
       <a href="index.html" class="brand">
         <span class="brand-mark">SD</span>
-        <span>Souk Digital</span>
+        <span data-i18n="brand">Souk Digital</span>
       </a>
-      <nav class="nav-links">
-        <a href="index.html">Accueil</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="about.html" class="active">À propos</a>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="about.html" class="active" data-i18n="nav.about">À propos</a>
       </nav>
       <div class="topbar-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">☀️</button>
+        <select class="lang-switcher" id="langSwitcher" aria-label="Language">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+        </select>
+        <button class="icon-btn" id="themeToggle" data-i18n-attr="aria-label:buttons.theme" aria-label="Changer de thème">☀️</button>
       </div>
     </header>
 
     <main class="page-shell about-page">
       <section class="hero compact-hero">
         <div>
-          <p class="eyebrow">À propos</p>
-          <h1>Nous connectons les passionnés de tech à des produits modernes.</h1>
-          <p>Souk Digital propose une expérience de shopping simple, élégante et orientée performance pour les accessoires et équipements informatiques.</p>
+          <p class="eyebrow" data-i18n="aboutPage.eyebrow">À propos</p>
+          <h1 data-i18n="aboutPage.title">Nous connectons les passionnés de tech à des produits modernes.</h1>
+          <p data-i18n="aboutPage.text">Souk Digital propose une expérience de shopping simple, élégante et orientée performance pour les accessoires et équipements informatiques.</p>
         </div>
       </section>
 
       <section class="about-grid">
         <article class="dashboard-card">
-          <h3>Notre mission</h3>
-          <p>Créer une vitrine e-commerce simple, rapide et visuellement soignée pour mettre en avant les meilleures solutions tech.</p>
+          <h3 data-i18n="aboutPage.missionTitle">Notre mission</h3>
+          <p data-i18n="aboutPage.missionText">Créer une vitrine e-commerce simple, rapide et visuellement soignée pour mettre en avant les meilleures solutions tech.</p>
         </article>
         <article class="dashboard-card">
-          <h3>Nos valeurs</h3>
+          <h3 data-i18n="aboutPage.valuesTitle">Nos valeurs</h3>
           <ul>
-            <li>Qualité et fiabilité</li>
-            <li>Design moderne</li>
-            <li>Expérience utilisateur fluide</li>
-            <li>Accessibilité et responsive</li>
+            <li data-i18n="aboutPage.values.0">Qualité et fiabilité</li>
+            <li data-i18n="aboutPage.values.1">Design moderne</li>
+            <li data-i18n="aboutPage.values.2">Expérience utilisateur fluide</li>
+            <li data-i18n="aboutPage.values.3">Accessibilité et responsive</li>
           </ul>
         </article>
       </section>

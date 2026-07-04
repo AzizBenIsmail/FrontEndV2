@@ -18,48 +18,54 @@
   </head>
   <body>
     <header class="topbar">
-      <a href="#" class="brand">
+      <a href="index.html" class="brand">
         <span class="brand-mark">SD</span>
-        <span>Souk Digital</span>
+        <span data-i18n="brand">Souk Digital</span>
       </a>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Accueil</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="about.html">À propos</a>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active" data-i18n="nav.home">Accueil</a>
+        <a href="dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="about.html" data-i18n="nav.about">À propos</a>
       </nav>
       <div class="topbar-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">☀️</button>
-        <button class="icon-btn" id="cartToggle" aria-label="Voir le panier">🛒 <span id="cartCount">0</span></button>
-        <button class="btn btn-outline" id="loginBtn">Connexion</button>
-        <button class="btn btn-primary" id="registerBtn">Créer un compte</button>
+        <select class="lang-switcher" id="langSwitcher" aria-label="Language">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+        </select>
+        <button class="icon-btn" id="themeToggle" data-i18n-attr="aria-label:buttons.theme" aria-label="Changer de thème">☀️</button>
+        <button class="icon-btn" id="cartToggle" data-i18n-attr="aria-label:buttons.cart" aria-label="Voir le panier">🛒 <span id="cartCount">0</span></button>
+        <button class="btn btn-outline" id="loginBtn" data-i18n="buttons.login">Connexion</button>
+        <button class="btn btn-primary" id="registerBtn" data-i18n="buttons.register">Créer un compte</button>
       </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Nouveautés 2026</p>
-          <h1>Équipez votre setup avec style et performance.</h1>
-          <p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Nouveautés 2026</p>
+          <h1 data-i18n="hero.title">Équipez votre setup avec style et performance.</h1>
+          <p data-i18n="hero.text">
             Découvrez des produits premium pour gamers, créateurs et pros du numérique.
             Livraison rapide, garanties officielles et promos exclusives.
           </p>
           <div class="hero-actions">
-            <a href="#products" class="btn btn-primary">Acheter maintenant</a>
-            <a href="#dashboard" class="btn btn-secondary">Voir le dashboard</a>
+            <a href="#products" class="btn btn-primary" data-i18n="hero.primaryBtn">Acheter maintenant</a>
+            <a href="#dashboard" class="btn btn-secondary" data-i18n="hero.secondaryBtn">Voir le dashboard</a>
           </div>
           <div class="hero-metrics">
             <div>
               <strong>24h</strong>
-              <span>Expédition</span>
+              <span data-i18n="hero.metrics.0">Expédition</span>
             </div>
             <div>
               <strong>4.9/5</strong>
-              <span>Clients satisfaits</span>
+              <span data-i18n="hero.metrics.1">Clients satisfaits</span>
             </div>
             <div>
               <strong>+150</strong>
-              <span>Produits premium</span>
+              <span data-i18n="hero.metrics.2">Produits premium</span>
             </div>
           </div>
         </div>
@@ -73,20 +79,20 @@
 
       <section class="categories">
         <article>
-          <h3>Ordinateurs portables</h3>
-          <p>Puissance et mobilité pour chaque besoin.</p>
+          <h3 data-i18n="categories.0.title">Ordinateurs portables</h3>
+          <p data-i18n="categories.0.text">Puissance et mobilité pour chaque besoin.</p>
         </article>
         <article>
-          <h3>Écrans</h3>
-          <p>Visuels immersifs et précision professionnelle.</p>
+          <h3 data-i18n="categories.1.title">Écrans</h3>
+          <p data-i18n="categories.1.text">Visuels immersifs et précision professionnelle.</p>
         </article>
         <article>
-          <h3>Accessoires</h3>
-          <p>Claviers, souris, casques et hubs USB-C.</p>
+          <h3 data-i18n="categories.2.title">Accessoires</h3>
+          <p data-i18n="categories.2.text">Claviers, souris, casques et hubs USB-C.</p>
         </article>
         <article>
-          <h3>Stockage</h3>
-          <p>SSD rapides et solutions de sauvegarde.</p>
+          <h3 data-i18n="categories.3.title">Stockage</h3>
+          <p data-i18n="categories.3.text">SSD rapides et solutions de sauvegarde.</p>
         </article>
       </section>
 
@@ -105,54 +111,54 @@
         <div class="dashboard-card">
           <div class="section-heading compact">
             <div>
-              <p class="eyebrow">Tableau de bord</p>
-              <h2>Vos préférences</h2>
+              <p class="eyebrow" data-i18n="dashboardSection.eyebrow">Tableau de bord</p>
+              <h2 data-i18n="dashboardSection.title">Vos préférences</h2>
             </div>
-            <a href="dashboard.html" class="text-link">Ouvrir</a>
+            <a href="dashboard.html" class="text-link" data-i18n="dashboardSection.open">Ouvrir</a>
           </div>
           <div class="summary-cards">
             <article>
               <strong id="favoriteCount">0</strong>
-              <span>Favoris</span>
+              <span data-i18n="dashboardSection.favorites">Favoris</span>
             </article>
             <article>
               <strong id="cartSummary">0</strong>
-              <span>Articles au panier</span>
+              <span data-i18n="dashboardSection.cartItems">Articles au panier</span>
             </article>
             <article>
               <strong>98%</strong>
-              <span>Disponibilité</span>
+              <span data-i18n="dashboardSection.availability">Disponibilité</span>
             </article>
           </div>
           <div id="favoritesList" class="favorites-list"></div>
         </div>
 
         <div id="about" class="dashboard-card accent-card">
-          <p class="eyebrow">Pourquoi Souk Digital ?</p>
-          <h3>Une expérience shopping moderne, rapide et élégante.</h3>
+          <p class="eyebrow" data-i18n="aboutSection.eyebrow">Pourquoi Souk Digital ?</p>
+          <h3 data-i18n="aboutSection.title">Une expérience shopping moderne, rapide et élégante.</h3>
           <ul>
-            <li>Design responsive adapté mobile et desktop</li>
-            <li>Mode clair / sombre avec préférences enregistrées</li>
-            <li>Panier et favoris interactifs sans backend</li>
-            <li>Authentification statique pour démonstration</li>
+            <li data-i18n="aboutSection.items.0">Design responsive adapté mobile et desktop</li>
+            <li data-i18n="aboutSection.items.1">Mode clair / sombre avec préférences enregistrées</li>
+            <li data-i18n="aboutSection.items.2">Panier et favoris interactifs sans backend</li>
+            <li data-i18n="aboutSection.items.3">Authentification statique pour démonstration</li>
           </ul>
-          <a href="about.html" class="btn btn-secondary" style="margin-top:1rem;display:inline-block;">En savoir plus</a>
+          <a href="about.html" class="btn btn-secondary" style="margin-top:1rem;display:inline-block;" data-i18n="aboutSection.more">En savoir plus</a>
         </div>
       </section>
     </main>
 
     <aside class="cart-panel" id="cartPanel" aria-hidden="true">
       <div class="cart-header">
-        <h3>Votre panier</h3>
+        <h3 data-i18n="cart.title">Votre panier</h3>
         <button id="closeCart" class="icon-btn">✕</button>
       </div>
       <div id="cartItems" class="cart-items"></div>
       <div class="cart-footer">
         <div class="cart-total">
-          <span>Total</span>
-          <strong id="cartTotal">0 DH</strong>
+          <span data-i18n="cart.total">Total</span>
+          <strong id="cartTotal">0 TND</strong>
         </div>
-        <button class="btn btn-primary wide">Passer la commande</button>
+        <button class="btn btn-primary wide" data-i18n="cart.checkout">Passer la commande</button>
       </div>
     </aside>
 
@@ -161,18 +167,18 @@
     <div class="modal" id="authModal" aria-hidden="true">
       <div class="modal-card">
         <div class="modal-top">
-          <h3 id="modalTitle">Connexion</h3>
+          <h3 id="modalTitle" data-i18n="auth.loginTitle">Connexion</h3>
           <button class="icon-btn" id="closeAuth">✕</button>
         </div>
         <div class="tabs">
-          <button class="tab active" data-mode="login">Connexion</button>
-          <button class="tab" data-mode="register">Inscription</button>
+          <button class="tab active" data-mode="login" data-i18n="auth.loginTab">Connexion</button>
+          <button class="tab" data-mode="register" data-i18n="auth.registerTab">Inscription</button>
         </div>
         <form class="auth-form" id="authForm">
-          <input type="email" placeholder="Adresse e-mail" required />
-          <input type="password" placeholder="Mot de passe" required />
-          <input id="confirmInput" type="password" placeholder="Confirmer le mot de passe" hidden />
-          <button class="btn btn-primary wide" type="submit">Se connecter</button>
+          <input type="email" placeholder="Adresse e-mail" data-i18n-placeholder="auth.email" required />
+          <input type="password" placeholder="Mot de passe" data-i18n-placeholder="auth.password" required />
+          <input id="confirmInput" type="password" placeholder="Confirmer le mot de passe" data-i18n-placeholder="auth.confirmPassword" hidden />
+          <button class="btn btn-primary wide" type="submit" data-i18n="auth.submitLogin">Se connecter</button>
         </form>
       </div>
     </div>
