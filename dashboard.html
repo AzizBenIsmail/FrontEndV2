@@ -16,46 +16,52 @@
     <header class="topbar">
       <a href="index.html" class="brand">
         <span class="brand-mark">SD</span>
-        <span>Souk Digital</span>
+        <span data-i18n="brand">Souk Digital</span>
       </a>
-      <nav class="nav-links">
-        <a href="index.html">Accueil</a>
-        <a href="dashboard.html" class="active">Dashboard</a>
-        <a href="about.html">À propos</a>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="dashboard.html" class="active" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="about.html" data-i18n="nav.about">À propos</a>
       </nav>
       <div class="topbar-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">☀️</button>
+        <select class="lang-switcher" id="langSwitcher" aria-label="Language">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+        </select>
+        <button class="icon-btn" id="themeToggle" data-i18n-attr="aria-label:buttons.theme" aria-label="Changer de thème">☀️</button>
       </div>
     </header>
 
     <main class="page-shell">
       <section class="hero compact-hero">
         <div>
-          <p class="eyebrow">Tableau de bord</p>
-          <h1>Suivez vos favoris, vos achats et vos préférences.</h1>
-          <p>Une page dédiée pour centraliser votre expérience d’achat et votre activité sur Souk Digital.</p>
+          <p class="eyebrow" data-i18n="dashboardPage.eyebrow">Tableau de bord</p>
+          <h1 data-i18n="dashboardPage.title">Suivez vos favoris, vos achats et vos préférences.</h1>
+          <p data-i18n="dashboardPage.text">Une page dédiée pour centraliser votre expérience d’achat et votre activité sur Souk Digital.</p>
         </div>
       </section>
 
       <section class="dashboard-grid">
         <article class="dashboard-card">
-          <h3>Vos produits préférés</h3>
+          <h3 data-i18n="dashboardPage.favoriteTitle">Vos produits préférés</h3>
           <div id="favoritesList" class="favorites-list"></div>
         </article>
         <article class="dashboard-card">
-          <h3>Résumé rapide</h3>
+          <h3 data-i18n="dashboardPage.summaryTitle">Résumé rapide</h3>
           <div class="summary-cards">
             <article>
               <strong id="favoriteCount">0</strong>
-              <span>Favoris</span>
+              <span data-i18n="dashboardSection.favorites">Favoris</span>
             </article>
             <article>
               <strong id="cartSummary">0</strong>
-              <span>Articles au panier</span>
+              <span data-i18n="dashboardSection.cartItems">Articles au panier</span>
             </article>
             <article>
               <strong>98%</strong>
-              <span>Disponibilité</span>
+              <span data-i18n="dashboardSection.availability">Disponibilité</span>
             </article>
           </div>
         </article>
